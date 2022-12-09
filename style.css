@@ -14,3 +14,104 @@ body {
 section {
   padding-top: 5rem;
 }
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
+
+#my-copper {
+  background-color: #ff9fc7;
+}
+
+/* My copper section */
+.copper-box {
+  position: relative;
+  background-color: #ff3974;
+  border-radius: 10px;
+  height: 500px;
+  /* overflow: hidden; */
+  transform-style: preserve-3d;
+}
+
+.copper-box::before {
+  content: "My";
+  position: absolute;
+  color: white;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.copper-box:hover::before {
+  opacity: 0.3;
+}
+
+.copper-box::after {
+  content: "Copper";
+  position: absolute;
+  color: white;
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.copper-box:hover::after {
+  opacity: 0.3;
+}
+
+.copper-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.copper-box:hover .copper-name {
+  opacity: 1;
+  top: 30px;
+}
+
+.copper-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.copper-box:hover .copper-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.copper-img {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate3d(-50%, -55%, 80px);
+  max-width: 250px;
+  transition: 0.5s;
+}
+.copper-box:hover .copper-img {
+  transform: translate3d(-50%, -55%, 80px) scale(1.2);
+}
